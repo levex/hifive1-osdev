@@ -15,6 +15,7 @@ LDFLAGS=-T $(LINKER_SCRIPT) \
 	#-L .
 	#--specs=nano.specs
 
+main.img: $(LINKER_SCRIPT)
 main.img: main.c
 	$(CROSS)gcc $< $(CFLAGS) -o $@ $(LDFLAGS)
 
